@@ -1,9 +1,15 @@
 # Marketing A/B Test: From Statistical Success to Economic Reality
 
-#### 📌 Project Overview
+### 📌 Project Overview
 This project is a comprehensive audit of a marketing A/B test involving 588,000+ users. While most analyses stop at proving "statistical significance," this project dives deeper into Unit Economics and Ad Fatigue to determine if the campaign's success in conversion actually translates into business profit.
 
-#### 📖 Dataset & Business Context
+###  Tech Stack
+* Database: PostgreSQL (Cloud-based via NeonDB).
+* Advanced SQL: CTEs, Window Functions (SUM() OVER, LAG), Gap Filling (generate_series).
+* Statistics: Z-Test for proportions, Sample Ratio Mismatch (SRM).
+* BI: Power BI (Multi-page Interactive Dashboard).
+
+### 📖 Dataset & Business Context
 Source: Kaggle - [Marketing A/B Testing](https://www.kaggle.com/datasets/faviovaz/marketing-ab-testing)
 
 Scenario: A retail company tested a new ad campaign.
@@ -13,22 +19,23 @@ Financial Assumptions:
 *   Cost per Ad View (CPA): $0.20
 *   Subscription/Product Price: $50.00
 
-####  Key Objectives
+###  Key Objectives
 Based on the analytical workflow, the project answers four critical questions:
 1. Data Integrity: Does the 96/4 sample split indicate a technical error or a deliberate design? (SRM Test).
 2. Statistical Impact: Did the ads cause a reliable increase in conversion rates? (Z-Score & Lift).
 3. Financial Audit: Is the campaign profitable given the $0.20/view cost? (ROAS & CAC).
 4. Behavioral Analysis: At what point does showing more ads stop being profitable? (Frequency & Marginal Analysis).
 
-####  Tech Stack
-* Database: PostgreSQL (Cloud-based via NeonDB).
-* Advanced SQL: CTEs, Window Functions (SUM() OVER, LAG), Gap Filling (generate_series).
-* Statistics: Z-Test for proportions, Sample Ratio Mismatch (SRM).
-* BI: Power BI (Multi-page Interactive Dashboard).
+### ⚙️ Project Workflow
+
+1. Environment Setup: Initialized a cloud-based PostgreSQL (NeonDB) instance and automated data ingestion via Python (Pandas & SQLAlchemy).
+2. Data Integrity Audit: Performed an SRM Test to validate the 96/4 sample split and ensure randomization wasn't compromised.
+3. Statistical Benchmarking: Calculated Conversion Rates, Lift, and Z-scores to prove the ad's impact on user behavior.
+4. Unit Economic Modeling: Injected financial parameters ($0.20 cost / $50 revenue) to shift from clicks to profit-based metrics.
+5. Marginal Profit & Fatigue Analysis: Developed a Gap-Filling SQL model to track the "Burnout Point" — identifying exactly when ad frequency turns from an asset into a liability.
+6. Insights Synthesis: Designed a Power BI Dashboard to translate technical SQL findings into strategic business recommendations.
 
 ### 🛠 Project Structure
-## 📂 Project Architecture
-
 This repository is organized into a clear pipeline, from data ingestion to the final business dashboard:
 
 ```plaintext
@@ -70,7 +77,7 @@ Using the assumptions (***Cost*** = $0.20, ***Price*** = $50), I built a financi
 |CAC (Customer Acquisition Cost)|$235.86|We pay $235 to get a $50 customer|
 |ROAS|0.18|For every $1 spent, we return only $0.18|
 
-**Business Verdict**: Despite the high Z-score, the campaign is commercially unsustainable. The acquisition cost is nearly 5x higher than the product price.
+**Business Verdict**: The campaign pays $235.86 to acquire a customer that only brings in $50.00. Despite the statistical success, the campaign is commercially unsustainable in its current state.
 
 ### Phase 3: The Search for Efficiency (Ad Fatigue Analysis)
 4. **The Frequency Trap**
