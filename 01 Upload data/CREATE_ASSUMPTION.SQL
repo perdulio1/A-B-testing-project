@@ -1,4 +1,4 @@
-CREATE TABLE project_config (
+CREATE TABLE І (
     parameter_name TEXT PRIMARY KEY,
     parameter_value DECIMAL(10, 2)
 );
