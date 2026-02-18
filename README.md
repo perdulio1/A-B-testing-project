@@ -33,7 +33,7 @@ Here are the main questions, the answers to which are the final result:
 
 
 
-![Dashboard Screen](screenshot.png)
+![Dashboard Screen](screenshot.jpg)
 
 
 
