@@ -47,7 +47,9 @@ Final tips:
 The most important improvement should be the implementation of Frequency Capping at the level of 100 units, because after this limit the probability of conversion drops, and advertising costs are guaranteed to exceed the $50 margin.
 The peak of effectiveness falls on 50–100 impressions, based on this it is recommended:
 1. automatically rotate advertising creatives every 15–20 touches to “break through” the audience’s attention faster and shift this peak to the area of ​​fewer impressions, which will significantly reduce the cost of customer acquisition (CAC).
+The goal is reduce the number of required impressions before conversion and shift the ROAS peak into the 20–40 frequency range.
 2. Abandon the fixed rate of $0.20 in favor of the cascade retargeting model, where expensive premium channels are used only for the first 10 contacts, and the long “warm-up” in the area of ​​50+ impressions is transferred to the cheapest banner networks and In-app advertising. This approach will allow you to maintain the high touch frequency necessary for this product, but will reduce the average cost per impression by several times, which is the only way to fix a loss-making campaign.
+The goal is to reduce the largest part of the costs (50 shows), and compensate for this with high-quality audience warm-up
 
 
 
